@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_yellow"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="12dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_menu"
+        android:scaleType="fitXY"
+        android:background="@drawable/bg_first"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FOOD"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_menu"
+        app:layout_constraintBottom_toBottomOf="@id/btn_menu"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_fifth"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_menu"
+        app:layout_constraintBottom_toBottomOf="@id/btn_menu"/>
+
+    <Button
+        android:id="@+id/btn_fast_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Fast Food"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_second"
+        app:layout_constraintEnd_toStartOf="@id/btn_chinese"
+        app:layout_constraintTop_toTopOf="@id/btn_chinese"/>
+
+    <Button
+        android:id="@+id/btn_chinese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Chinese"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_third"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+    <Button
+        android:id="@+id/btn_indian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Indian"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_second"
+        app:layout_constraintStart_toEndOf="@id/btn_chinese"
+        app:layout_constraintTop_toTopOf="@id/btn_chinese"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_chinese"
+        tools:listitem="@layout/item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
